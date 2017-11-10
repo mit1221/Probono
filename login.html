@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>    
+      <button class="g-signin2" onclick="onSignIn()">Google</button>    
+      
+      
+     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+            apiKey: "AIzaSyAGjrAeHwfv3SnUUQ96tuwi1TJDIkRJgmU",
+            authDomain: "probono-df31c.firebaseapp.com",
+            databaseURL: "https://probono-df31c.firebaseio.com",
+            storageBucket: "",
+            messagingSenderId: "165504515120"
+            };
+            
+            firebase.initializeApp(config);
+            
+            // var probonoTitle = document.getElementById('probono-title');
+            // var dbRef = firebase.database().ref().child('probono-title');
+            // dbRef.on('value', snap => probonoTitle.innerText = snap.val());
+        </script>
+      
+                <script>
+      function onSignIn(googleUser) {
+            var provider = new firebase.auth.GoogleAuthProvider();
+            provider.addScope('https://www.googleapis.com/auth/plus.login');
+            firebase.auth().signInWithPopup(provider).then(function(result) {
+                console.log(result);
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            
+            console.log("currentUser", firebase.auth().currentUser);
+            // ...
+            }).catch(function(error) {
+                 console.log(error);
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+            });
+      }
+    </script>
+  </body>
+</html>

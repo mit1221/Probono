@@ -1,0 +1,310 @@
+/* 
+Probono Web App
+-=+=-=+=-=+=-=+=-
+Created by: Daman Sharma, Mit Kapadia, Suchir Navalyal and Varun Khatri
+Hack The North
+-=+=-=+=-=+=-=+=-
+[Color Palette]
+White: #fff
+Blue: #00BCD4
+Grey: #F0F0F0
+-=+=-=+=-=+=-=+=-
+*/
+
+/* General */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #FFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pushdown {
+    position: relative;
+    top: 50px;
+
+}
+/* Navagation Bar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100vw;
+    height: 50px;
+    padding: 5px 0;
+    background-color: #FFF;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.small-ds {
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.10);
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.10);
+}
+
+.navbar .container #logo-container {
+    /* Allows for the logotype to be centered */  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .container #logo-container .logo {
+    /* Logo Type As A Background */
+    display: inline-block;
+    text-indent: -9999px;
+    width: 100px;
+    height: 34px;
+    background: url('../img/Probono.svg') center center no-repeat;
+    background-size: 100px 34px;
+}
+
+#navbarTotal {
+    font-size: 20px;
+    text-align: right;
+    margin-right: 40px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#logout-button {
+    border: none;
+    height: 40px;
+    width: 95px;
+    border-radius: 20px;
+    background-color: #3F51B5;
+    color: white;
+    
+    -webkit-box-shadow: 0px 5px 14px -3px rgba(0,0,0,0.3s);
+    -moz-box-shadow: 0px 5px 14px -3px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 14px -3px rgba(0,0,0,0.3);
+}
+
+#logout-button:hover {
+    transition: background-color .5s ease, color .5s ease;
+    background-color: #00BCD4;
+}
+
+
+/* Hero Banner */
+
+.hero {
+    height: 115px;
+    background-color: #00BCD4;
+    color: #fff;
+}
+
+.large-ds {
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.25);
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donate-icon {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 80px;
+    height: 115px;
+    background: url('../img/heart.svg') center center no-repeat;
+    background-size: 80px 110px;
+}
+
+@media screen and (max-width: 677px){
+    .hero {
+        height: 125px;
+    }
+}
+
+/* Main Body*/
+
+#mainbody .container {
+    margin: auto;
+    margin-top: 20px;
+}
+
+#mainbody .container .row div .nfp-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 420px;
+    border-radius: 3px;
+    margin: 0 30px;
+    margin-bottom: 80px;
+    background: #f0f0f0;
+    
+    -webkit-box-shadow: 0px 5px 14px -3px rgba(0,0,0,0.3s);
+    -moz-box-shadow: 0px 5px 14px -3px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 14px -3px rgba(0,0,0,0.3);
+}
+
+#mainbody .container .row div .nfp-card .pix {
+    height: 80px;
+    margin: 10px 0;
+}
+
+#mainbody .container .row div .nfp-card .info {
+    margin: 0px 15px;
+    text-align: left;
+}
+
+#donate-button {
+    border: none;
+    height: 40px;
+    width: 95px;
+    border-radius: 20px;
+    background-color: #00BCD4;
+    color: white;
+    
+    -webkit-box-shadow: 0px 5px 14px -3px rgba(0,0,0,0.3s);
+    -moz-box-shadow: 0px 5px 14px -3px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 14px -3px rgba(0,0,0,0.3);
+}
+
+#donate-button:hover {
+    transition: background-color .5s ease, color .5s ease;
+    background-color: #3F51B5;
+}
+
+.dollar {
+    display: inline;
+}
+.month {
+    display: inline;
+}
+
+.money {
+    width: 50px;
+    display: inline;
+}
+
+/* Login */
+.flex-page-center {
+    display: flex;
+    height:100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-page-center input {
+    margin-bottom: 10px;
+}
+
+.flex-page-center #btnLogin {
+    border-radius: 20px;
+    margin-left: 50px;
+}
+
+.flex-page-center #btnSignup {
+    border-radius: 20px;
+    margin-left: 43px;
+}
+
+.flex-page-center button:hover {
+    transition: background-color .5s ease, color .5s ease;
+    background-color: #00BCD4;
+    color: white;
+}
+
+.userIcon {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 200px;
+    height: 200px;
+    background: url('../img/team.svg') center center no-repeat;
+    background-size: 200px 200px;
+}
+
+.userAddIcon {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 200px;
+    height: 200px;
+    background: url('../img/signup.svg') center center no-repeat;
+    background-size: 200px 200px;
+}
+
+.switch-authentication a {
+    color: #00BCD4;
+}
+
+.switch-authentication a:hover {
+    text-decoration: none;
+    color: #3F51B5;
+}
+
+/* Footer */
+#footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    color: white;
+    height: 100px;
+    background-color: #3F51B5;
+    
+    -webkit-box-shadow: inset 0px 10px 12px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: inset 0px 10px 12px 0px rgba(0,0,0,0.13);
+    box-shadow: inset 0px 10px 12px 0px rgba(0,0,0,0.13);
+}
+
+#footer a {
+    color: white;
+}
+
+#footer a:hover {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Modal Box*/
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    z-index: 21;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#close {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    color: #FFFFFF;
+    font-size: 32px;
+}
+
+#close:hover {
+    transition: color .5s ease;
+    text-decoration: none;
+    color: #00BCD4;
+    cursor: pointer;
+}
+
+#payment-table {
+    
+}

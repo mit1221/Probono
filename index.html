@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <header>
+       <title>Probono | Subscription-based Donations</title>
+       <!-- Style Sheets -->
+       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i" rel="stylesheet">
+       <link type="text/css" rel="stylesheet" href="assets/styles/bootstrap.min.css"/>
+       <link type="text/css" rel="stylesheet" href="assets/styles/styles.css"/>
+       <link type="text/css" rel="stylesheet" href="assets/styles/slider.css"/>
+    </header> 
+    <body onload="beginningReading()">
+        <nav id="shadow-scroll" class="navbar small-ds">
+           <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <button id="logout-button" onclick="logout()">Logout!</button>
+                    </div>
+                    <div id="logo-container" class="col-md-6 col-sm-6 col-xs-6">
+                        <a href="#" id="logo" class="logo"> Probono </a>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <p id="navbarTotal"></p>
+                    </div>
+                </div>
+           </div>
+        </nav>
+        
+        <div class="pushdown">
+            <div class="hero large-ds">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-8">
+                            <h3> Donate </h3>
+                            <p>For the good of others, donate money to the non-profit organizations you believe in through a monthly subscription basis.</p>
+                        </div>
+                        <div class="col-md-6 col-xs-4 flex-center">
+                            <a href="/" class="donate-icon"> Icon </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="mainbody">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12"> 
+                            <div class="nfp-card">
+                                <img class="pix" src="assets/img/RedCross.png">
+                                <div class="info">
+                                    <h4>Description:</h4>
+                                    <p>The American Red Cross (ARC) is a humanitarian organization that provides emergency assistance, disaster relief and education inside the United States</p>
+                                </div>
+                                <input onchange="readValue(1); total()" type="range" id="read1" name="quantity" min="0" max="100" value="0">
+                                <div id="value-wrapper">
+                                    <p class="dollar">$</p>
+                                    <input onchange="writeValue(1); total()" min="0" max="100" class="money" type="number" id="paymentValue1">
+                                    <p class="month">/month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="nfp-card">
+                                <img class="pix" src="assets/img/Unicef.png">
+                                <div class="info">
+                                    <h4>Description:</h4>
+                                    <p>The United Nations Children's Fund is a United Nations program headquartered in New York City that provides humanitarian and developmental assistance to children and mothers in developing countries.</p>
+                                </div>
+                                <input onchange="readValue(2); total()" type="range" id="read2" name="quantity" min="0" max="100" value="0">
+                                <div id="value-wrapper">
+                                    <p class="dollar">$</p>
+                                    <input onchange="writeValue(2); total()" min="0" max="100" class="money" type="number" id="paymentValue2">
+                                    <p class="month">/month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="nfp-card">
+                                <img class="pix" src="assets/img/HeartStroke.png"> 
+                                <div class="info">
+                                    <h4>Description:</h4>
+                                    <p>The Heart and Stroke Foundation of Canada is a registered Canadian charity. The foundation's purpose is centered on educating individuals about the prevention and management of heart disease and stroke, and to fund medical research regarding the causes of these conditions.</p>
+                                </div>
+                                <input onchange="readValue(3); total()" type="range" id="read3" name="quantity" min="0" max="100" value="0">
+                                <div id="value-wrapper">
+                                    <p class="dollar">$</p>
+                                    <input onchange="writeValue(3); total()" min="0" max="100" class="money" type="number" id="paymentValue3">
+                                    <p class="month">/month</p>
+                                </div>
+                            </div>                    
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="nfp-card">
+                                <img class="pix" src="assets/img/SickKidsLogo.png"> 
+                                <div class="info">
+                                    <h4>Description:</h4>
+                                    <p>Non-governmental granting agency investing in child healthcare in Canada, inspiring donations to charities for children's health and research.</p>
+                                </div>
+                                <input onchange="readValue(4); total()" type="range" id="read4" name="quantity" min="0" max="100" value="0">
+                                <div id="value-wrapper">
+                                    <p class="dollar">$</p>
+                                    <input onchange="writeValue(4); total()" min="0" max="100" class="money" type="number" id="paymentValue4">
+                                    <p class="month">/month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="nfp-card">
+                                <img class="pix" src="assets/img/UnitedWay.png"> 
+                                <div class="info">
+                                    <h4>Description:</h4>
+                                    <p>United Way's focus is to identify and resolve pressing community issues, and to make measurable changes in communities through partnerships with schools, government agencies, businesses, etc.</p>
+                                </div>
+                                    <input onchange="readValue(5); total()" type="range" id="read5" name="quantity" min="0" max="100" value="0">
+                                    <div id="value-wrapper">
+                                        <p class="dollar">$</p>
+                                        <input onchange="writeValue(5); total()" min="0" max="100" class="money" type="number" id="paymentValue5">
+                                        <p class="month">/month</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="nfp-card">
+                                <img class="pix" src="assets/img/SalvationArmy.png"> 
+                                <div class="info">
+                                    <h4>Description:</h4>
+                                    <p>The Salvation Army is a Christian church and international charitable organisation structured in a quasi-military fashion.</p>
+                                </div>
+                                <input onchange="readValue(6); total()" type="range" id="read6" name="quantity" min="0" max="100" value="0">
+                                <div id="value-wrapperr">
+                                    <p class="dollar">$</p>
+                                    <input onchange="writeValue(6); total()" min="0" max="100" class="money" type="number" id="paymentValue6">
+                                    <p class="month">/month</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-center">
+                    <button id="donate-button" onclick="openModal(); modalFill()">Donate!</button>
+                </div>
+            </div>
+            
+            <footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col sm-4 col-xs-12">
+                            <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-4 col sm-4 col-sm-offset-4 col-xs-12">
+                            <p class="margin">&copy; Prisma HackTheNorth 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+         <!-- Hidden Modal Box -->
+        <div class="fullscreen flex-center" id="modal">
+            <div class="modal-box">
+                <a id="close" onclick="close();">x</a>
+                <h3>Confirm your donation!</h3>
+                <table class="table table-striped" id="payment-table">
+                    <tr>
+                        <th>Non-Profit</th>
+                        <th>Donation ($/month)</th>
+                    </tr>
+                    <tr>
+                        <td>Red Cross</td>
+                        <td id="t1"></td>
+                    </tr>
+                    <tr>
+                        <td>Unicef</td>
+                        <td id="t2"></td>
+                    </tr>
+                    <tr>
+                        <td>Heart and Stroke Foundation</td>
+                        <td id="t3"></td>
+                    </tr>
+                    <tr>
+                        <td>Sick Kids Foundation</td>
+                        <td id="t4"></td>
+                    </tr>
+                    <tr>
+                        <td>United Way</td>
+                        <td id="t5"></td>
+                    </tr>
+                    <tr>
+                        <td>The Salvation Army</td>
+                        <td id="t6"></td>
+                    </tr>
+                    <tr>
+                        <td>Total Amount</td>
+                        <td id="t7">n/a</td>
+                    </tr>
+                </table>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="P4LK8XCUW8B46">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+            </div>
+        </div>
+        <!-- JavaScript -->
+        
+        <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+            apiKey: "AIzaSyAGjrAeHwfv3SnUUQ96tuwi1TJDIkRJgmU",
+            authDomain: "probono-df31c.firebaseapp.com",
+            databaseURL: "https://probono-df31c.firebaseio.com",
+            storageBucket: "",
+            messagingSenderId: "165504515120"
+            };
+            
+            firebase.initializeApp(config);
+            
+            // var probonoTitle = document.getElementById('probono-title');
+            // var dbRef = firebase.database().ref().child('probono-title');
+            // dbRef.on('value', snap => probonoTitle.innerText = snap.val());
+        </script>
+        
+        <script src="assets/js/jquery-3.1.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

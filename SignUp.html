@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        
+       <title>Probono | Sign Up</title>
+       <!-- Style Sheets -->
+       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i" rel="stylesheet">
+       <link type="text/css" rel="stylesheet" href="assets/styles/bootstrap.min.css"/>
+       <link type="text/css" rel="stylesheet" href="assets/styles/styles.css"/>
+       <link type="text/css" rel="stylesheet" href="assets/styles/slider.css"/>
+        
+        
+       <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+        <script> const config = {
+            apiKey: "AIzaSyAGjrAeHwfv3SnUUQ96tuwi1TJDIkRJgmU",
+            authDomain: "probono-df31c.firebaseapp.com",
+            databaseURL: "https://probono-df31c.firebaseio.com",
+            storageBucket: "probono-df31c.appspot.com",
+            messagingSenderId: "165504515120"
+          }; 
+          firebase.initializeApp(config); </script>
+        <script src="assets/js/SignUp.js"></script> 
+    
+    </head>
+
+    <body>
+        <nav id="shadow-scroll" class="navbar small-ds">
+           <div class="container">
+                <div class="row">
+                    <div id="logo-container" class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                        <a href="#" class="logo"> Probono </a>
+                    </div>
+                </div>
+           </div>
+        </nav>
+        
+        <div class="flex-page-center">
+            <div class="authentication-icon">
+                <a href="/" class="userAddIcon"> User </a>
+            </div>
+            <div class="sign-up-holder">
+                <input id="txtEmail" type="Email" placeholder="Email"> <br>
+                <input id="txtPassword" type="Password" placeholder="Password"> <br>
+                <button id="btnSignup" class="btn btn-action" onclick="signup()">Sign Up</button>
+            </div>
+            <p class="switch-authentication">Already have an account? <a href="SignIn.html">Sign In!</a></p>
+        </div>
+    
+    </body>
+
+</html>
